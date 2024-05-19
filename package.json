@@ -9,7 +9,9 @@
         "build:dev": "webpack --env mode=development",
         "unit": "jest --config ./config/jest/jest.config.ts",
         "lint": "eslint \"**/*.{ts,tsx}\"",
-        "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix"
+        "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+        "lint:css": "npx stylelint \"**/*.scss\"",
+        "lint:css:fix": "npx stylelint \"**/*.scss\" --fix"
     },
     "repository": {
         "type": "git",
@@ -55,6 +57,8 @@
         "sass": "^1.49.9",
         "sass-loader": "^12.6.0",
         "style-loader": "^3.3.1",
+        "stylelint": "^14.5.3",
+        "stylelint-config-standard-scss": "^3.0.0",
         "ts-loader": "^9.2.6",
         "ts-node": "^10.5.0",
         "typescript": "^4.5.5",
