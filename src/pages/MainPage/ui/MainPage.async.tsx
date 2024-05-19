@@ -1,15 +1,14 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
-//для примера, удалить позже
+// для примера, удалить позже
 
 export const MainPageAsync = lazy(
-    () =>
-        new Promise((resolve) => {
-            //@ts-ignore
-            setTimeout(() => resolve(import("./MainPage")), 1500);
-        })
+    () => new Promise((resolve) => {
+    // @ts-ignore
+        setTimeout(() => resolve(import('./MainPage')), 1500);
+    }),
 );
 
-//заменить на это
+// заменить на это
 
 // export const MainPageAsync = lazy(() => import("./MainPage"));
