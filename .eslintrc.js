@@ -5,6 +5,7 @@ module.exports = {
     },
     extends: [
         'plugin:react/recommended',
+        'plugin:i18next/recommended',
         'airbnb',
     ],
     overrides: [
@@ -27,6 +28,7 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
     ],
     rules: {
         indent: [2, 4],
@@ -55,6 +57,9 @@ module.exports = {
         'react/prop-types': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
+        'i18next/no-literal-string': ['error', {
+            markupOnly: true,
+        }],
 
     },
     settings: {
