@@ -68,6 +68,8 @@ module.exports = {
         }],
         'max-len': ['error', {
             ignoreComments: true,
+            code: 90,
+            ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
         }],
     },
     settings: {
