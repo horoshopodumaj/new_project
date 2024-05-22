@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        // node: true,
     },
     extends: [
         'plugin:react/recommended',
@@ -39,7 +40,7 @@ module.exports = {
         }],
         'react/jsx-filename-extension': [2,
             {
-                extensions: ['js', 'jsx', 'ts', 'tsx'],
+                extensions: ['.js', '.jsx', '.tsx'],
             }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -49,7 +50,7 @@ module.exports = {
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
-        'no-undef': 'warn',
+        'no-undef': 'off',
         'import/extensions': 'off',
         'object-curly-spacing': ['warn', 'always'],
         'react/jsx-curly-brace-presence': 'off',
@@ -76,5 +77,8 @@ module.exports = {
         react: {
             version: 'detect',
         },
+    },
+    globals: {
+        __IS_DEV__: true,
     },
 };
