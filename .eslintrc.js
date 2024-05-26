@@ -16,6 +16,18 @@ module.exports = {
                 'no-undef': 'off',
             },
         },
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
+        {
+            files: ['src/**/*.test.{ts,tsx}', 'config/**/*{ts,tsx}'],
+            rules: {
+                'import/no-extraneous-dependencies': 'off',
+            },
+        },
     ],
     parser: '@babel/eslint-parser',
     parserOptions: {
@@ -66,7 +78,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            allowedStrings: ['TEST'],
+            ignoreAttribute: ['data-testid'],
         }],
         'max-len': ['error', {
             ignoreComments: true,
