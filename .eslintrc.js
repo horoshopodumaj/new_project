@@ -66,6 +66,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
+            allowedStrings: ['TEST'],
         }],
         'max-len': ['error', {
             ignoreComments: true,

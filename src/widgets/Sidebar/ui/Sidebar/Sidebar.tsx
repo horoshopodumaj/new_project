@@ -20,7 +20,7 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
     };
 
     return (
-        <div className={classNames(
+        <div data-testid='sidebar' className={classNames(
             cls.sidebar,
             { [cls.collapsed]: collapsed },
             [className],
