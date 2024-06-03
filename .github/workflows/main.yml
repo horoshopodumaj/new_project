@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is launched CI 🚀
 on:
   push:
     branches: [ master ]
-  pull-requests:
+  pull_requests:
     branches: [ master ]
 jobs:
   Pipeline:
