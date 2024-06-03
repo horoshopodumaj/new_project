@@ -85,7 +85,7 @@ module.exports = {
             code: 90,
             ignorePattern: '^import\\s.+\\sfrom\\s.+;$',
         }],
-        'linebreak-style': ['error', process.platform === 'win64' ? 'windows' : 'unix'],
+        'linebreak-style': 0,
     },
     settings: {
         react: {
