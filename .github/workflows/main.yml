@@ -29,8 +29,8 @@ jobs:
         run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
-      # - name: fix screenshots (remove)
-      #   run: npm run test:ui:update
+      - name: fix screenshots (remove)
+        run: npm run test:ui:update
       - name: screenshot testing
         run: npm run test:ui:ci
       
