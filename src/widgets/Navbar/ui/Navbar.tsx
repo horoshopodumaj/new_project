@@ -1,5 +1,5 @@
-/* eslint-disable i18next/no-literal-string */
 import { useTranslation } from 'react-i18next';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink';
 import { AppLinkTheme } from 'shared/ui/AppLink/ui/AppLink';
@@ -18,13 +18,10 @@ export const Navbar: React.FC<NavbarProps> = (props) => {
             <div className={cls.links}>
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
-                    to={'/'}
+                    to={RoutePath.main}
                     className={cls.mainLink}
                 >
                     {t('Главная')}
-                </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={'/about'}>
-                    {t('О сайте')}
                 </AppLink>
             </div>
         </div>
