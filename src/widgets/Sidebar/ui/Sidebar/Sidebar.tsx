@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import AboutIcon from 'shared/assets/icons/about-20-20.svg';
+import MainIcon from 'shared/assets/icons/main-20-20.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink';
@@ -45,20 +47,25 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.items}>
+
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.main}
-                    className={cls.link}
+                    className={cls.item}
                 >
-                    {t('Главная')}
+                    <MainIcon className={cls.icon}/>
+                    <span className={cls.link}>{t('Главная')}</span>
                 </AppLink>
+
                 <AppLink
                     theme={AppLinkTheme.SECONDARY}
                     to={RoutePath.about}
-                    className={cls.link}
+                    className={cls.item}
                 >
-                    {t('О сайте')}
+                    <AboutIcon className={cls.icon}/>
+                    <span className={cls.link}>{t('О сайте')}</span>
                 </AppLink>
+
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
